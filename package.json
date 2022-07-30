@@ -1,0 +1,23 @@
+{
+  "name": "mini-vite",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "node ./server.js",
+    "socket": "node ./socket.js"
+  },
+  "dependencies": {
+    "@vue/compiler-dom": "^3.2.37",
+    "chokidar": "^3.5.3",
+    "fs-extra": "^10.1.0",
+    "koa": "^2.13.4",
+    "vue": "^3.2.37",
+    "ws": "^8.8.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}

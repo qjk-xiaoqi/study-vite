@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简易 vite</title>
+</head>
+<body>
+  <div id="app"></div>
+  <div>mini vite</div>
+  <script type="module">
+    const socket = new WebSocket('ws://192.168.8.4:5000')
+    socket.addEventListener('message', (event) => {
+      const {type} = JSON.parse(event.data)
+      if(type  === 'css') {
+        // 重新发起css get 请求
+        const xtr  = new XMLHttpRequest();
+        const url = 'http://192.168.8.4:8489/src/index.css';
+        xtr.open("GET", url)
+        xhr.send();
+      }
+    })
+  </script>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
